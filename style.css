@@ -1,0 +1,225 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+header {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+
+#authBar input {
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+}
+
+#authBar button {
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+main {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+form input, form textarea, form select, form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+#itemList {
+  list-style: none;
+  padding: 0;
+}
+
+#itemList li {
+  padding: 0.6rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#mapContainer {
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #1e40af;
+  transform: scale(1.02);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+#itemList li:hover {
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  #authBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #authBar input {
+    width: 100%;
+    margin-bottom: 0.4rem;
+  }
+}
+section h2 {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+input, textarea, select {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+input:focus, textarea:focus, select:focus {
+  background: white;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+}
+
+
+form button {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+form button:hover {
+  background: #1e40af;
+}
+
+#emptyState {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+#itemList li {
+  background: #f9fafb;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#itemList li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge.lost { background: #dc2626; }
+.badge.found { background: #16a34a; }
+
+#mapContainer {
+  border: 2px dashed #e5e7eb;
+  background: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+section {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
